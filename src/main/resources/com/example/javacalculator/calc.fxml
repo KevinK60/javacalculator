@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" hgap="10" prefHeight="250.0" prefWidth="194.0" vgap="10" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javacalculator.HelloController">
+
+    <TextField fx:id="operand1TextField" prefHeight="26.0" prefWidth="149.0" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="0">
+      <font>
+         <Font size="20.0" />
+      </font></TextField>
+
+    <Button fx:id="nmb1" onAction="#nmb1" text="1" GridPane.rowIndex="2" />
+    <Button fx:id="nmb2" onAction="#nmb2" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Button fx:id="nmb3" onAction="#nmb3" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <Button fx:id="add" onAction="#add" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+    <Button fx:id="nmb4" onAction="#nmb4" text="4" GridPane.rowIndex="3" />
+    <Button fx:id="nmb5" onAction="#nmb5" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Button fx:id="nmb6" onAction="#nmb6" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    <Button fx:id="subtract" onAction="#subtract" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+    <Button fx:id="nmb7" onAction="#nmb7" text="7" GridPane.rowIndex="4" />
+    <Button fx:id="nmb8" onAction="#nmb8" text="8" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Button fx:id="nmb9" onAction="#nmb9" text="9" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <Button fx:id="multiply" onAction="#multiply" text="*" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+
+    <Button fx:id="nmb0" onAction="#nmb0" text="0" GridPane.rowIndex="5" />
+    <Button fx:id="clear" onAction="#clear" text="C" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <Button fx:id="equals" onAction="#equals" text="=" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+    <Button fx:id="divide" onAction="#divide" text="/" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+   <Label fx:id="resultLabel" GridPane.rowIndex="1">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+</GridPane>
