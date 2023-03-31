@@ -6,56 +6,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class HelloController {
+public class Controller {
 
     private String operator = "";
     private double operand1 = 0;
     private double operand2 = 0;
 
-    @FXML
-    private Button add;
-
-    @FXML
-    private Button clear;
-
-    @FXML
-    private Button divide;
-
-    @FXML
-    private Button equals;
-
-    @FXML
-    private Button multiply;
-
-    @FXML
-    private Button nmb0;
-
-    @FXML
-    private Button nmb1;
-
-    @FXML
-    private Button nmb2;
-
-    @FXML
-    private Button nmb3;
-
-    @FXML
-    private Button nmb4;
-
-    @FXML
-    private Button nmb5;
-
-    @FXML
-    private Button nmb6;
-
-    @FXML
-    private Button nmb7;
-
-    @FXML
-    private Button nmb8;
-
-    @FXML
-    private Button nmb9;
 
     @FXML
     private TextField operand1TextField;
@@ -76,7 +32,7 @@ public class HelloController {
     @FXML
     void clear(ActionEvent event) {
         operand1TextField.setText("");
-        resultLabel.setText("");
+
         operand1 = 0;
         operand2 = 0;
         operator = "";
@@ -107,7 +63,7 @@ public class HelloController {
                 result = operand1 / operand2;
                 break;
         }
-        resultLabel.setText(String.valueOf(result));
+
         operand1TextField.setText(String.valueOf(result));
         operand1 = result;
         operand2 = 0;
@@ -152,21 +108,28 @@ public class HelloController {
 
     @FXML
     void nmb6(ActionEvent event) {
-        operand1TextField.setText(operand1TextField.getText() + "
+        operand1TextField.setText(operand1TextField.getText() + "6");
     }
-}
+
 
     @FXML
     void nmb7(ActionEvent event) {
-
+        operand1TextField.setText(operand1TextField.getText() + "7");
     }
 
     @FXML
     void nmb8(ActionEvent event) {
-
+        operand1TextField.setText(operand1TextField.getText() + "8");
     }
 
     @FXML
     void nmb9(ActionEvent event) {
-
+        operand1TextField.setText(operand1TextField.getText() + "9");
     }
+    @FXML
+    void subtract(ActionEvent event) {
+        operator = "-";
+        operand1 = Double.parseDouble(operand1TextField.getText());
+        operand1TextField.setText("");
+    }
+}
